@@ -6,6 +6,8 @@ Version 0.1
 
 ## Overview
 
+A simple module that implements a REST API for the ESP8266 chip.
+
 If you want to know more about aREST, go over to [http://arest.io/](http://arest.io/).
 
 ## Contents
@@ -19,13 +21,28 @@ The library is in theory working with all the modules based on the ESP8266 chip.
 
 ## Requirements
 
-Using this library requires an ESP8266 board with the NodeMCU firmware running on it.
+Using this library requires an ESP8266 board with the NodeMCU firmware running on it, and connected to your local WiFi network. You can learn more about the NodeMCU firmware on the NodeMCU GitHub repository ([https://github.com/nodemcu/nodemcu-firmware](https://github.com/nodemcu/nodemcu-firmware)). 
+
+You can also find a complete guide on how to setup an ESP8266 board with the NodeMCU firmware on:
+
+[https://www.openhomeautomation.net/getting-started-esp8266/](https://www.openhomeautomation.net/getting-started-esp8266/)
 
 ## Setup
 
-To install the library, simply clone this repository in the /libraries folder 
+To install the module, simply place the aREST.lua file at the root of your ESP8266 board. To do so you can use tools like ESPlorer ([https://github.com/4refr0nt/ESPlorer](https://github.com/4refr0nt/ESPlorer)) or LuaTool ([https://github.com/4refr0nt/luatool](https://github.com/4refr0nt/luatool)).
 
-## Quick test
+## GPIO Pins
+
+This module follows the GPIO pins mapping as defined in the official [NodeMCU firmware documentation](https://github.com/nodemcu/nodemcu-firmware/wiki/nodemcu_api_en#new_gpio_map).
+
+## Quick Test
+
+1. Connect a LED & resistor to pin number 1 of your ESP8266 board
+2. Start your ESP8266 module and get the IP address of the module. Let's assume here it is 192.168.1.103
+3. Put the basic.lua example at the root of your ESP8266 chip
+4. Execute the file via the dofile("basic.lua") command
+5. Go to a web browser and type `192.168.1.103/mode/1/o` to set the pin as an output
+6. Now type `192.168.1.103/digital/1/1` and the LED should turn on
 
 ## API documentation
 
