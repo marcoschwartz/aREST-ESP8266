@@ -1,5 +1,7 @@
 # aREST-ESP8266
 
+**This project is now deprecated, as I am focusing all my efforts on the Arduino-compatible ESP8266 library. You can find the Arduino-compatible version of the library at [https://github.com/marcoschwartz/aREST](https://github.com/marcoschwartz/aREST)**
+
 aREST API for the ESP8266 WiFi chip using the NodeMCU firmware
 
 Version 0.1
